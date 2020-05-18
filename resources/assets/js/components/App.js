@@ -75,7 +75,7 @@ class App extends Component {
                             className="btn btn-sm btn-success float-right"
                         >
                             Editar
-                        </Link>
+          </Link> 
                         <button
                             onClick={() => this.handleDelete(task.id)}
                             className="btn btn-sm btn-warning float-right"
@@ -147,7 +147,7 @@ class App extends Component {
                                                 <input onChange={this.handleChange} value={this.state.cidade} class="form-control" name="cidade" type="text" placeholder="Nome da cidade" id="example-tel-input" />
                                             </div>
                                         </div>
-                                        <p>Você são considerados pela secretaria municipal
+                                        <p>Vocês são considerados pela secretaria municipal
                                 de saúde ponto de referência no atendimento ao COVID-19?</p>
                                         <fieldset class="form-group">
                                             <div class="row">

@@ -71694,7 +71694,7 @@ var App = /*#__PURE__*/function (_Component) {
         type: "text",
         placeholder: "Nome da cidade",
         id: "example-tel-input"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Voc\xEA s\xE3o considerados pela secretaria municipal de sa\xFAde ponto de refer\xEAncia no atendimento ao COVID-19?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Voc\xEAs s\xE3o considerados pela secretaria municipal de sa\xFAde ponto de refer\xEAncia no atendimento ao COVID-19?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", {
         "class": "form-group"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         "class": "row"
