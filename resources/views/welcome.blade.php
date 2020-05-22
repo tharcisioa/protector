@@ -91,7 +91,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49891777307_e23aac14b5_b.jpg slide" style="width:auto; height:400px;" alt="First slide">
+      <img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49923508638_2f18ed860f_b.jpg slide" style="width:auto; height:400px;" alt="First slide">
     </div>
     <div class="carousel-item">
       <img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49891464846_f88f74b39a_b.jpg slide" style="width:auto; height:400px;"  alt="Second slide">
