@@ -91,10 +91,10 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49923508638_2f18ed860f_b.jpg slide" style="width:auto; height:400px;" alt="First slide">
+    <a href= "{{ route('register') }}" ><img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49923508638_2f18ed860f_b.jpg slide" style="width:auto; height:400px;" alt="First slide"></a>
     </div>
     <div class="carousel-item">
-      <img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49891464846_f88f74b39a_b.jpg slide" style="width:auto; height:400px;"  alt="Second slide">
+    <img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49891464846_f88f74b39a_b.jpg slide" style="width:auto; height:400px;"  alt="Second slide">
     </div>
     <div class="carousel-item">
       <img class="d-block mx-auto" src="https://live.staticflickr.com/65535/49891464916_dd7ed59921_b.jpg slide" style="width:auto; height:400px;"  alt="Third slide">

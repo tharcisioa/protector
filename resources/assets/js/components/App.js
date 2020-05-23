@@ -14,7 +14,8 @@ class App extends Component {
             tel: '',
             tasks: [],
             quantity1: "0",
-            quantity2: "0"
+            quantity2: "0",
+            show: false,
         };
         // bind
         this.handleChange = this.handleChange.bind(this);
@@ -77,6 +78,17 @@ class App extends Component {
                         >
                             Editar
                         </Link> */}
+           <div>
+              {
+                  this.state.show? <div>
+                      
+                    <div className = "text-muted">Quantidade Emergencial: {task.quantity1} </div>
+                    <div className = "text-muted">Quantidade não-emergencial: {task.quantity2} </div>
+                  
+                   </div> : null
+              }
+              <button className="btn btn-sm btn-success float-right" onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Esconder' : 'Detalhes'} </button>
+          </div>
                         <button
                             onClick={() => this.handleDelete(task.id)}
                             className="btn btn-sm btn-warning float-right"
@@ -110,6 +122,14 @@ class App extends Component {
         // make delete request to the backend
         axios.delete(`/tasks/${id}`);
     }
+    handleShow(id) {
+        // remove from local state
+        const isNotId = task => task.id !== id;
+        const updatedTasks = this.state.tasks.filter(isNotId);
+        this.setState({ tasks: updatedTasks });
+        // make delete request to the backend
+        axios.delete(`/tasks/${id}`);
+    }
 
     render(){
         return(
@@ -122,6 +142,8 @@ class App extends Component {
         >
             Nova Solicitação
         </Link>
+        
+ 
         </div>
         );
     }

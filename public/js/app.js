@@ -71537,7 +71537,8 @@ var App = /*#__PURE__*/function (_Component) {
       tel: '',
       tasks: [],
       quantity1: "0",
-      quantity2: "0"
+      quantity2: "0",
+      show: false
     }; // bind
 
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
@@ -71598,7 +71599,18 @@ var App = /*#__PURE__*/function (_Component) {
           className: "media-body"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, task.name, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "text-muted"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "por ", task.user.name, " |", " ", task.created_at.split("T").slice(0, 1)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "por ", task.user.name, " |", " ", task.created_at.split("T").slice(0, 1)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _this3.state.show ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "text-muted"
+        }, "Quantidade Emergencial: ", task.quantity1, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "text-muted"
+        }, "Quantidade n\xE3o-emergencial: ", task.quantity2, " ")) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "btn btn-sm btn-success float-right",
+          onClick: function onClick() {
+            _this3.setState({
+              show: !_this3.state.show
+            });
+          }
+        }, _this3.state.show ? 'Esconder' : 'Detalhes', " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
             return _this3.handleDelete(task.id);
           },
@@ -71628,6 +71640,21 @@ var App = /*#__PURE__*/function (_Component) {
   }, {
     key: "handleDelete",
     value: function handleDelete(id) {
+      // remove from local state
+      var isNotId = function isNotId(task) {
+        return task.id !== id;
+      };
+
+      var updatedTasks = this.state.tasks.filter(isNotId);
+      this.setState({
+        tasks: updatedTasks
+      }); // make delete request to the backend
+
+      axios["delete"]("/tasks/".concat(id));
+    }
+  }, {
+    key: "handleShow",
+    value: function handleShow(id) {
       // remove from local state
       var isNotId = function isNotId(task) {
         return task.id !== id;
